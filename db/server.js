@@ -1,4 +1,5 @@
 import configDB from './config';
+import fetch from 'isomorphic-unfetch';
 
 const header = {
     'Accept': 'application/json',
