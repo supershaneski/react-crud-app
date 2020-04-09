@@ -49,9 +49,7 @@ class Index extends React.Component {
         return (
             <>
             <main>
-                
-                <div 
-                style={{display: `${todoVisible}`}} 
+                <div style={{display: `${todoVisible}`}} 
                 className="todo-container">
                     {
                         todos.length > 0 && todos.map((item, index) => {
@@ -65,19 +63,11 @@ class Index extends React.Component {
                         })
                     }                    
                 </div>
-                
-                <div 
-                style={{display: `${notodoVisible}`}} 
-                className="notodo-container">
-                    <div className="noitem-message">
-                        <span>No Todo Items</span>
-                    </div>
+                <div style={{display: `${notodoVisible}`}} className="notodo-container">
+                    <div className="noitem-message"><span>No Todo Items</span></div>
                 </div>
-                
                 <TodoAdd onClick={this.handleAdd} />
-
             </main>
-            
             <style jsx>
                 {`
                 .notodo-container {

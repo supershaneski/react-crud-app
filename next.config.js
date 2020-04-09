@@ -7,7 +7,7 @@ module.exports = {
       return config
     },
     env: {
-        siteTitle: 'react-crud-app',
+        siteTitle: 'MERN Sample | React/Next Todo App',
     },
     exportTrailingSlash: true,
     exportPathMap: function() {

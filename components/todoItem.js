@@ -29,23 +29,11 @@ export default function TodoItem(props) {
     const sdate = getDateValue(item.date);
     return (
         <>
-        <div className="todo-item">
-            
-            <TodoDelete
-                onClick={props.onDelete} />
-            
-            <div className="todo-date">
-                <span>{ sdate }</span>
-            </div>
-
-            <div className="todo-contents">
-                <span>{ item.name }</span>
-            </div>
-            
-            <TodoLike 
-                state={item.state}
-                onClick={props.onLike} />
-
+        <div className="todo-item">            
+            <TodoDelete onClick={props.onDelete} />            
+            <div className="todo-date"><span>{ sdate }</span></div>
+            <div className="todo-contents"><span>{ item.name }</span></div>            
+            <TodoLike state={item.state} onClick={props.onLike} />
         </div>
         <style jsx>
         {`

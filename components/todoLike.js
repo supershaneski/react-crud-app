@@ -3,12 +3,7 @@ export default function TodoLike(props) {
     const sheart = (props.state > 0)?'/heart_selected.svg':'/heart.svg';
     return (
         <>
-        <div 
-        className="todo-like"
-        onClick={props.onClick}
-        >
-            <img src={sheart} />
-        </div>
+        <div className="todo-like" onClick={props.onClick} ><img src={sheart} /></div>
         <style jsx>
             {`
             .todo-like {

@@ -7,7 +7,7 @@ import Server from '../db/server';
 
 export default function MyApp({ Component, pageProps }) {
     
-    const siteTitle = process.env.SiteTitle || 'MERN Sample | React/Next Todo App';
+    const siteTitle = process.env.siteTitle || 'React/Next Todo App';
     const props = {
         ...pageProps
     }

@@ -104,23 +104,16 @@ class TodoAdd extends React.Component {
         const sErrorMsg = (this.state.error)?'You need to put something.':'max 64 chars';
         return (
             <>
-            <div className="control-panel">
-            
-            <Fab onClick={this.handleClickOpen.bind(this)} color="secondary" aria-label="add">
-                <AddIcon />
-            </Fab>
-
+            <div className="control-panel">            
+            <Fab onClick={this.handleClickOpen.bind(this)} color="secondary" aria-label="add"><AddIcon /></Fab>
             <Dialog 
                 fullWidth={true}
                 maxWidth={'md'}
                 open={this.state.open} 
                 onClose={this.handleClose.bind(this)} 
-                aria-labelledby="form-dialog-title"
-            >
-
+                aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">New Todo</DialogTitle>
-                <DialogContent>
-                
+                <DialogContent>                
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <Grid>
                     <KeyboardDatePicker
@@ -134,11 +127,9 @@ class TodoAdd extends React.Component {
                             'aria-label': 'select date',
                         }}
                         value={this.state.date}
-                        onChange={this.handleDateChange.bind(this)}
-                    />
+                        onChange={this.handleDateChange.bind(this)} />
                     </Grid>                    
                 </MuiPickersUtilsProvider>
-
                 <TextField
                     autoFocus
                     margin="dense"
@@ -149,22 +140,13 @@ class TodoAdd extends React.Component {
                     onChange={this.handleText.bind(this)}
                     error={this.state.error}
                     helperText={sErrorMsg}
-                    fullWidth
-                />
-                
+                    fullWidth />                
                 </DialogContent>
-
                 <DialogActions>
-                    <Button onClick={this.handleClose.bind(this)} color="primary">
-                        Cancel
-                    </Button>
-                    <Button onClick={this.handleAdd.bind(this)} color="primary">
-                        Add
-                    </Button>
+                    <Button onClick={this.handleClose.bind(this)} color="primary">Cancel</Button>
+                    <Button onClick={this.handleAdd.bind(this)} color="primary">Add</Button>
                 </DialogActions>
-
             </Dialog>
-
         </div>
         <style jsx>
         {`
